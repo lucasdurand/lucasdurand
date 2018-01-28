@@ -1,18 +1,14 @@
-:root{
-  --scale:1.5px;
-  --space:0.5px;
-}
-
 .Tiny-art {
+  position:relative;
+  float:left;
   padding:5px;
   margin:5px;
-  display:inline-block;
-  font-size: var(--scale); 
+  font-size: 0.5vh; 
   font-family:Mono, Courier;
-  letter-spacing: var(--space);
-  line-height:var(--scale);
+  letter-spacing:0.05vh;
+  line-height:0.3vh;
   /*text-justify:kashida;*/
-  color:#fff;
+  color:#666;
   background-color:#222;
 }
 
