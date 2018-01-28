@@ -1,12 +1,44 @@
-.Tiny-art {
-  position:relative;
-  float:left;
+.Resume-chunk {
+
+  color:#fff;
   padding:5px;
   margin:5px;
+  display:inline-block;
+}
+
+h2.Resume-chunk {
+display:block;
+vertical-align:top;
+text-align:left;
+padding:0;
+}
+
+
+.Resume-item {
+  background-color:#333;
+  padding:10px;
+  padding-left:25px;
+  margin:5px;
+  border-radius:10px;
+  display:inline-block;
+}
+
+.Tiny-art {
+/*  max-width: 100vw;
+  max-height: 100vh;
+*/
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  z-index:-1;
+  position:absolute;
+  text-align:right;
+  top:10%;
+  left:0px;
   font-size: 0.5vh; 
   font-family:Mono, Courier;
   letter-spacing:0.05vh;
-  line-height:0.3vh;
+  line-height:0.35vh;
   /*text-justify:kashida;*/
   color:#666;
   background-color:#222;
@@ -32,7 +64,15 @@
   height: 80px;
 }
 
+.Spacer {
+  position:relative;
+  margin-top:100px;
+}
+
 .App-header {
+  position:fixed;
+  top:0;
+  width:100%;
   background-color: #222;
   /*height: 150px;*/
   padding: 20px;
