@@ -12,6 +12,13 @@ text-align:left;
 padding:0;
 }
 
+.Resume-holder{
+  padding:0px;
+  margin-right:-15px;
+  margin-left:-15px;
+  display:inline-block;
+}
+
 .Resume-title {
   padding:0px;
   margin:0px;
@@ -21,6 +28,7 @@ padding:0;
   font-style:italic;
   margin-bottom:5px;
 }
+
 .Resume-item {
   max-width:400px;
   list-style-type: circle;
@@ -52,7 +60,7 @@ padding:0;
   left:0px;
   font-size: 0.5vh; 
   font-family:Mono, Courier;
-  letter-spacing:0.05vh;
+  letter-spacing:0.005vh;
   line-height:0.35vh;
   /*text-justify:kashida;*/
   color:#666;
@@ -61,21 +69,29 @@ padding:0;
 .Noverflow {
   padding:0;
   margin:0;
-  width:100%;
+  /*width:100%;
   overflow:hidden;
   /*overflow:hidden;*/
   /*width:100%;*/
 }
 
-.Nav-button {
-  font-family:Garamond, serif;
+.Nav-bar {
   display:inline-block;
+  transition: all 1s ease, width 1s ease;
+}
+
+.Nav-button {
+  position:relative;
+  display:inline-block;
+  color:white;
+  font-family:Garamond, serif;
   font-size:1.5em;
   padding:10px;
   font-style:bold;
   font-variant: small-caps;
   vertical-align:middle;
   border:2px solid #222;
+  transition: all 1s ease;
 }
 
 .Nav-button:hover {
@@ -95,6 +111,16 @@ padding:0;
   filter:invert(100%);
 }
 
+.dates {
+  vertical-align:top; 
+  font-weight: bold;
+  margin:10px;
+  /*width:10%;*/
+  /*transform:rotate(-90deg);*/
+  /*writing-mode: vertical-rl;
+  text-orientation: upright;*/
+}
+
 .App {
   text-align: center;
 }
@@ -106,22 +132,23 @@ padding:0;
 
 .Spacer {
   position:relative;
-  margin-top:100px;
+  margin-top:50px;
 }
 
 .App-header {
+  text-align:left;
   z-index:10;
   position:fixed;
   top:0;
   width:100%;
+  /*width:100%;*/
   background-color: #222;
   /*height: 150px;*/
-  padding: 20px;
+  
   color: white;
 }
 
 .App-title {
-  /*display:inline-block;*/
   vertical-align: middle;
   /*margin:0px 20px;*/
   /*font-size: 1.5em;*/
