@@ -8,6 +8,7 @@ import td from './td.svg';
 import nbfm from './nbc.svg';
 import uoft from './uoft.svg';
 import york from './york.png';
+import sax from './sax.svg';
 import atom from './atom.svg';
 import face from './face.png';
 import chair from './chair.svg';
@@ -232,6 +233,7 @@ const ParallaxBack = () => (
       <h2 className="Resume-chunk">Volunteering</h2>
         <div>
           <p className="dates">Annual</p>
+          <img className="Resume-item" src={sax} height={logosize}/>
           <ul className="Resume-item">
           <h3 className="Resume-title">Benefit Concerts</h3>
             <li>ABC for SickKids</li>
@@ -246,6 +248,7 @@ const ParallaxBack = () => (
         </div>
         <div>
           <p className="dates">2014 - Present</p>
+          <img className="Resume-item" src={uoft} height={logosize}/>
           <ul className="Resume-item">
           <h3 className="Resume-title">UofT A&S Mentorship Program</h3>
             <li>Department of Physics Mentor</li>
@@ -253,6 +256,7 @@ const ParallaxBack = () => (
         </div>
         <div>
           <p className="dates">Jul 2016 - Present</p>
+          <img className="Resume-item" src={td} height={logosize}/>
           <ul className="Resume-item">
           <h3 className="Resume-title">TD Associate Knowledge Academy</h3>
             <li>Lunch n' Learn Presenter</li>
