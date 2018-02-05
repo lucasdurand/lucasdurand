@@ -100,7 +100,7 @@ class App extends Component {
       <div className="App">
       {this.state.width>500? ParallaxBack():null}	
       <header className="App-header">
-      <div className={this.state.me?"Nav-button active":"Nav-button App-title"} onClick={()=>{scroll.scrollToTop()}} onDoubleClick={()=>this.setState({me:!this.state.me,})}>{this.state.me? 'Back to CV':'Lucas Durand'}</div>
+      <div className={this.state.me?"Nav-button active":"Nav-button App-title"} onClick={()=>{scroll.scrollToTop(); if(this.state.me){this.setState({me:false})}}} onDoubleClick={()=>this.setState({me:!this.state.me,})}>{this.state.me? 'Back to CV':'Lucas Durand'}</div>
       {this.state.width>500 && !this.state.me? (
       <div className="Nav-bar">
           <Link activeClass="active" className="Nav-button" to="exp" spy={true} smooth={true} offset={-headerheight} duration={500}>

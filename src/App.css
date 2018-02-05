@@ -70,7 +70,7 @@ padding:0;
   left:0px;
   color:#666;
   font-size: 0.3em; 
-  letter-spacing:0.05em;
+  letter-spacing:0.03em;
   line-height:0.5em;
   /*
   font-size: 0.5vh; 
@@ -83,7 +83,7 @@ padding:0;
   padding:0;
   margin:0;
   overflow:hidden;
-  max-width:100vw;
+  max-width:98vw;
   /*width:100%;
   overflow:hidden;
   /*overflow:hidden;*/
