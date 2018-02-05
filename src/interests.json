@@ -1,0 +1,34 @@
+[
+  {
+    "id":1,
+    "name":"Machine Learning",
+    "percentage":55,
+    "skills":["Keras","Scikit-Learn","MLLib","NLP","Time-series"]
+  },
+
+  {
+    "id":2,
+    "name":"Quantitative Modelling",
+    "percentage":85,
+    "skills":["Fixed Income","Option Pricing","Bi/Trinomial Trees","FFT","Monte Carlo"]
+  },
+  
+  {
+    "id":3,
+    "name":"Visualisation",
+    "percentage":67,
+    "skills":["matplotlib","plotly","seaborn"]
+  },
+  {
+    "id":5,
+    "name": "Application Dev",
+    "percentage":80,
+    "skills":["reactjs","nodejs","Flask","electron"]
+  },
+  {
+    "id":4,
+    "name":"Big Data",
+    "percentage":40,
+    "skills":["Hadoop","Spark","Pandas"]
+  }
+] 

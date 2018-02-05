@@ -19,12 +19,20 @@ import * as Scroll from 'react-scroll';
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import withSizes from 'react-sizes';
+import interests from './interests.json';
+import languages from './languages.json';
+import { Pie, Venn } from './plots.js';
+import {Doughnut} from 'react-chartjs-2';
+import shuffle from 'shuffle-array';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state=this.props;
+    this.state={interests:interests,
+      activeInterest:-1,
+      languages:[],
+      width:props.width};
   }
 
   componentDidMount(){
@@ -39,7 +47,9 @@ class App extends Component {
     });
 
     scrollSpy.update();
-
+    console.log("Mounted!", this.state);
+    this.setState({languages:this.constructLanguages(languages)});
+    this.forceUpdate();
   }
   
   componentWillUnmount() {
@@ -47,23 +57,45 @@ class App extends Component {
     Events.scrollEvent.remove('end');
   }
 
+  constructLanguages(langs){
+    const start = 1;
+    const end = 250;
+    console.log('constructLanguages');
+    var out = {};
+    var c = 0.0
+    out["labels"] = langs.map((lang)=>lang.label);
+    out["datasets"]=[{"data":langs.map((lang)=>lang.value),
+      "backgroundColor": langs.map((lang,i)=>{
+        c = Math.round((i*(end-start)/langs.length)+start);
+        return `rgba(${c},${c},${c},0.6)`;
+        }
+      ),
+      "hoverBackgroundColor": '#fff'
+    }]
+    out["datasets"][0]["backgroundColor"]=shuffle(out["datasets"][0]["backgroundColor"]);
+    console.log(out);
+    return out;  
+    }
+
+
   render() {
   	const logosize = 40;
-
-const ParallaxBack = () => (
-    <Parallax
-        className="Tiny-art"
-        offsetYMax={1000}
-        offsetYMin={-400}
-        slowerScrollRate
-        tag="div" 
-    >	
-    	<Masterpiece/>
-    	
+    const headerheight = 60;
     
-    </Parallax> );
+    const ParallaxBack = () => (
+        <Parallax
+            className="Tiny-art"
+            offsetYMax={1000}
+            offsetYMin={-400}
+            slowerScrollRate
+            tag="div" 
+        >	
+        	<Masterpiece/>
+        	
+        
+        </Parallax> );
 
-    return (
+  return (
 	<ParallaxProvider>
       <div className="App">
       {this.state.width>500? ParallaxBack():null}	
@@ -71,36 +103,64 @@ const ParallaxBack = () => (
       <div className={this.state.me?"Nav-button active":"Nav-button App-title"} onClick={()=>{scroll.scrollToTop()}} onDoubleClick={()=>this.setState({me:!this.state.me,})}>{this.state.me? 'Back to CV':'Lucas Durand'}</div>
       {this.state.width>500 && !this.state.me? (
       <div className="Nav-bar">
-          <Link activeClass="active" className="Nav-button" to="exp" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link activeClass="active" className="Nav-button" to="exp" spy={true} smooth={true} offset={-headerheight} duration={500}>
         		Work
         	</Link>
           
-          <Link activeClass="active" className="Nav-button" to="education" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link activeClass="active" className="Nav-button" to="education" spy={true} smooth={true} offset={-headerheight} duration={500}>
         		Education
         	</Link>
           
-          <Link activeClass="active" className="Nav-button" to="volunteering" spy={true} smooth={true} offset={-100} duration={500}>
-            Volunteering
+          <Link activeClass="active" className="Nav-button" to="more" spy={true} smooth={true} offset={-headerheight} duration={500}>
+            More
           </Link>
 
-          <Link activeClass="active" className="Nav-button" to="leadership" spy={true} smooth={true} offset={-100} duration={500}>
-            Leadership
-          </Link>
-
-          <Link activeClass="active" className="Nav-button" to="contact" spy={true} offset={-100} smooth={true} duration={500}>
+          <Link activeClass="active" className="Nav-button" to="contact" spy={true} offset={-headerheight} smooth={true} duration={500}>
         		Contact
         	</Link>
       </div>
         ): null}
       </header>
 
-      {this.state.width<=500 && this.state.me? <div className="Tiny-art"><Masterpiece/></div>:null}
+      {this.state.width<=500 && this.state.me? <div className="Mobile-art"><Masterpiece/></div>:null}
 
 <div className="Spacer"/>
 {this.state.me? null: ( <div>
 <div>
   <div className="Resume-chunk">
-	<Element name="exp"><h2 className="Resume-chunk">Experience</h2>
+    <Element name="skills"><h2 className="Resume-chunk">Skills</h2>
+      <div className="Noverflow">
+        {this.state.interests.map((interest,i)=>
+            <div key={interest.id} className="Skill-circle" onMouseEnter={()=>this.setState({activeInterest:interest.id})} onMouseLeave={()=>this.setState({activeInterest:-1})}>
+              {this.state.activeInterest === interest.id?
+                <ul>
+                {interest.skills.map((skill,j)=>
+                  <li key={j}>{skill}</li> 
+                  )}
+                </ul>
+              : <Pie percent={interest.percentage} width={100} />
+              }
+            <h4>{interest.name}</h4>
+            </div>  
+          )}
+      </div>
+      <div className="Noverflow">
+        <h2 className="Resume-chunk">Languages</h2>
+        <Doughnut data={this.state.languages} height={Math.min(300,this.state.width)} legend={{
+        display: true,
+        position: 'bottom',
+        fullWidth: false,
+        reverse: false,
+        labels: {
+          fontColor: '#fff'}}}/>
+      </div>
+    </Element>
+  </div>
+</div>
+
+<div>
+  <div className="Resume-chunk">
+	<Element name="exp"><h2 className="Resume-chunk">Work</h2>
   	<div>
           <p className="dates">Aug 2017 - Feb 2018</p>
           <div className="Resume-item">
@@ -126,7 +186,6 @@ const ParallaxBack = () => (
           <ul className="Resume-item">
           	<h3 className="Resume-title">Quant Developer</h3>
           	<div className="Resume-role">TD Bank - Treasury Analytics Group</div>
-
   			<li>Leverage data visualization tools to deliver interactive mortgage-backed security (MBS) valuation module to business leaders</li>
   	        <li> Benchmark and stability testing of quasi-Monte Carlo method allows for Key Rate Vega and Convexity hedging   </li>
   	        <li> Presented <i>Lunch n' Learn</i> featuring real-time code execution and animations</li>
@@ -182,10 +241,17 @@ const ParallaxBack = () => (
             <li>Explored use cases for visualisation libraries by analysing real-time market data</li>
           </ul>
       </div>
+
   </Element>
-	</div>
+  </div>
 </div>
 
+<div>
+  <Element name="languages">
+    <div className="Resume-chunk">
+    </div>
+  </Element>
+</div>
 	<div>
 		<Element name="education">
 			<div className="Resume-chunk">
@@ -227,8 +293,8 @@ const ParallaxBack = () => (
 		</Element>
 	</div>
 
-  <div>
-    <Element name="volunteering">
+  <Element name="more">
+    <div>
       <div className="Resume-chunk">
       <h2 className="Resume-chunk">Volunteering</h2>
         <div>
@@ -265,10 +331,8 @@ const ParallaxBack = () => (
           </ul>
         </div>
       </div>
-    </Element>
   </div>
   <div>
-    <Element name="leadership">
     <div className="Resume-chunk">
       <h2 className="Resume-chunk">Leadership</h2>
       <div>
@@ -300,22 +364,26 @@ const ParallaxBack = () => (
       </div>
 
     </div>
-    </Element>
   </div>
+  </Element>
 	<div>
 		<Element name="contact">
 		<div className="Resume-chunk">
 			<h2 className="Resume-chunk">Contact</h2>
 			<div className="Resume-item">Reach me by the digital channel of your choosing:</div>
-		        <div className="Resume-item">
-		      		<a href='mailto:lucas@lucasdurand.xyz'><img className="inverted" src={gmail} height={logosize} /></a>
-	      		</div>
-		        <div className="Resume-item">
-		        	<img className="inverted" src={linkedin} height={logosize}/>
-		        </div>
-		        <div className="Resume-item">
-		        	<a href='https://github.com/lucasdurand' target='_blank'><img className="inverted" alt="GitHub" src={github} height={logosize}/></a>
-		        </div>
+      <div>
+        <div className="Resume-item">
+      		<a href='mailto:lucas@lucasdurand.xyz'><img className="inverted" src={gmail} height={logosize} /></a>
+    		</div>
+        <div className="Resume-item">
+        	<a href="https://www.linkedin.com/in/lucasdurand">
+            <img className="inverted" src={linkedin} height={logosize}/>
+          </a>
+        </div>
+        <div className="Resume-item">
+        	<a href='https://github.com/lucasdurand' target='_blank'><img className="inverted" alt="GitHub" src={github} height={logosize}/></a>
+        </div>
+      </div>
 		</div>
 		</Element>
 	</div>

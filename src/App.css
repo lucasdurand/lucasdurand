@@ -3,6 +3,7 @@
   padding:5px;
   margin:5px;
   display:inline-block;
+  max-width:500px;
 }
 
 h2.Resume-chunk {
@@ -45,30 +46,44 @@ padding:0;
   background-color:none;
 }
 
-.Tiny-art {
-/*  max-width: 100vw;
-  max-height: 100vh;
-*/
-  background-color: #111;
-  /*width:20%;*/
-  /*height:100%;*/
+
+.Mobile-art {
   z-index:-1;
   position:absolute;
   text-align:right;
-  /*top:10%;*/
+  font-family:Mono, Courier;
   top:0px;
   left:0px;
+  color:#666;
+
   font-size: 0.5vh; 
-  font-family:Mono, Courier;
   letter-spacing:0.005vh;
   line-height:0.35vh;
-  /*text-justify:kashida;*/
+}
+
+.Tiny-art {
+  z-index:-1;
+  position:absolute;
+  text-align:right;
+  font-family:Mono, Courier;
+  top:0px;
+  left:0px;
   color:#666;
+  font-size: 0.3em; 
+  letter-spacing:0.05em;
+  line-height:0.5em;
+  /*
+  font-size: 0.5vh; 
+  letter-spacing:0.005vh;
+  line-height:0.35vh;
+  */
 }
 
 .Noverflow {
   padding:0;
   margin:0;
+  overflow:hidden;
+  max-width:100vw;
   /*width:100%;
   overflow:hidden;
   /*overflow:hidden;*/
@@ -121,6 +136,27 @@ padding:0;
   text-orientation: upright;*/
 }
 
+.Skill-wrap {
+  max-width:400px;
+  background-color:rgba(33,33,33,0.75);
+  padding:10px;
+  margin:5px;
+  border-radius:10px;
+}
+
+.Skill-circle {
+  display:inline-block;
+  padding:10px;
+  transition: all 1s ease, width 1s ease;
+}
+
+.Skill-circle ul{
+  list-style-type: none;
+  vertical-align: middle;
+  text-align:left;
+  transition:height 5s ease;
+}
+
 .App {
   text-align: center;
 }
@@ -150,6 +186,7 @@ padding:0;
 
 .App-title {
   vertical-align: middle;
+  text-align:center;
   /*margin:0px 20px;*/
   /*font-size: 1.5em;*/
   font-family:Garamond, serif;
