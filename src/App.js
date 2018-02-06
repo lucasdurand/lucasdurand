@@ -164,7 +164,7 @@ class App extends Component {
   	<div>
           <p className="dates">Aug 2017 - Feb 2018</p>
           <div className="Resume-item">
-            <img  src={td} height={logosize}/>
+            <img  src={td} width={logosize}/>
           </div>
           <ul className="Resume-item">
           	<h3 className="Resume-title">Quant Developer</h3>
@@ -181,7 +181,7 @@ class App extends Component {
       <div>    
           <p className="dates">Feb 2017 - Jul 2018</p>
           <div className="Resume-item">
-            <img  src={td} height={logosize}/>
+            <img  src={td} width={logosize}/>
           </div>
           <ul className="Resume-item">
           	<h3 className="Resume-title">Quant Developer</h3>
@@ -198,7 +198,7 @@ class App extends Component {
       <div>    
           <p className="dates">Jul 2016 - Feb 2018</p>
           <div className="Resume-item">
-            <img  src={td} height={logosize}/>
+            <img  src={td} width={logosize}/>
           </div>
           <ul className="Resume-item">
             <h3 className="Resume-title">Business Systems Analyst</h3>
@@ -215,7 +215,7 @@ class App extends Component {
       <div>    
           <p className="dates">Sep 2014 - Apr 2016</p>
           <div className="Resume-item">
-            <img  src={york} height={logosize}/>
+            <img  src={york} width={logosize}/>
           </div>
           <ul className="Resume-item">
             <h3 className="Resume-title">Teaching & Research Assistant</h3>
@@ -229,7 +229,7 @@ class App extends Component {
       <div>    
           <p className="dates">Apr 2014 - Sep 2015</p>
           <div className="Resume-item">
-            <img  src={nbfm} height={logosize}/>
+            <img  src={nbfm} width={logosize}/>
           </div>
           <ul className="Resume-item">
             <h3 className="Resume-title">Application Analyst</h3>
@@ -258,7 +258,7 @@ class App extends Component {
 			<h2 className="Resume-chunk">Education</h2>
 				<div>
               <p className="dates">2014 - 2016</p>
-			        <img className="Resume-item" src={york} height={logosize}/>
+			        <img className="Resume-item" src={york} width={logosize}/>
         			<ul className="Resume-item">
         			<h3 className="Resume-title">MSc., Theoretical Physics</h3>
 		        	<div className="Resume-role">York University, Perimeter Institute (PI)</div>
@@ -268,7 +268,7 @@ class App extends Component {
         		</div>
         		<div>
               <p className="dates">2009 - 2014</p>
-			        <img className="Resume-item" src={uoft} height={logosize}/>
+			        <img className="Resume-item" src={uoft} width={logosize}/>
         			<ul className="Resume-item">
         			<h3 className="Resume-title">HBSc., Physics & Philosophy</h3>
 		        	<div className="Resume-role">Trinity College, University of Toronto</div>
@@ -277,7 +277,7 @@ class App extends Component {
         		</div>
 			<h2 className="Resume-chunk">Research</h2>
 				<div>
-			        <img className="Resume-item" src={york} height={logosize}/>
+			        <img className="Resume-item" src={york} width={logosize}/>
         			<ul className="Resume-item">
         			<h3 className="Resume-title">Major Research Project</h3>
 		        	<div className="Resume-role">Tulin Research Group</div>
@@ -299,7 +299,7 @@ class App extends Component {
       <h2 className="Resume-chunk">Volunteering</h2>
         <div>
           <p className="dates">Annual</p>
-          <img className="Resume-item" src={sax} height={logosize}/>
+          <img className="Resume-item" src={sax} width={logosize}/>
           <ul className="Resume-item">
           <h3 className="Resume-title">Benefit Concerts</h3>
             <li>ABC for SickKids</li>
@@ -314,7 +314,7 @@ class App extends Component {
         </div>
         <div>
           <p className="dates">2014 - Present</p>
-          <img className="Resume-item" src={uoft} height={logosize}/>
+          <img className="Resume-item" src={uoft} width={logosize}/>
           <ul className="Resume-item">
           <h3 className="Resume-title">UofT A&S Mentorship Program</h3>
             <li>Department of Physics Mentor</li>
@@ -322,7 +322,7 @@ class App extends Component {
         </div>
         <div>
           <p className="dates">Jul 2016 - Present</p>
-          <img className="Resume-item" src={td} height={logosize}/>
+          <img className="Resume-item" src={td} width={logosize}/>
           <ul className="Resume-item">
           <h3 className="Resume-title">TD Associate Knowledge Academy</h3>
             <li>Lunch n' Learn Presenter</li>
@@ -337,7 +337,7 @@ class App extends Component {
       <h2 className="Resume-chunk">Leadership</h2>
       <div>
         <p className="dates">2017 - Present</p>
-        <img className="Resume-item" src={chair} height={logosize}/>
+        <img className="Resume-item" src={chair} width={logosize}/>
         <div className="Resume-item">
           <h3 className="Resume-title">Second Chair Solutions Ltd.</h3>
           Director of the Board
@@ -346,7 +346,7 @@ class App extends Component {
 
       <div>
         <p className="dates">2009 - 2014</p>
-        <img className="Resume-item" src={lit} height={logosize}/>
+        <img className="Resume-item" src={lit} width={logosize}/>
         <div className="Resume-item">
           <h3 className="Resume-title">Trinity College Literary Institute</h3>
           Speaker
@@ -356,7 +356,7 @@ class App extends Component {
 
       <div>
         <p className="dates">2009 - 2014</p>
-        <img className="Resume-item" src={trin} height={logosize}/>
+        <img className="Resume-item" src={trin} width={logosize}/>
         <div className="Resume-item">
           <h3 className="Resume-title">Trinity College Meeting</h3>
           Deputy Chair
@@ -373,15 +373,15 @@ class App extends Component {
 			<div className="Resume-item">Reach me by the digital channel of your choosing:</div>
       <div>
         <div className="Resume-item">
-      		<a href='mailto:lucas@lucasdurand.xyz'><img className="inverted" src={gmail} height={logosize} /></a>
+      		<a href='mailto:lucas@lucasdurand.xyz'><img className="inverted" src={gmail} width={logosize} /></a>
     		</div>
         <div className="Resume-item">
         	<a href="https://www.linkedin.com/in/lucasdurand">
-            <img className="inverted" src={linkedin} height={logosize}/>
+            <img className="inverted" src={linkedin} width={logosize}/>
           </a>
         </div>
         <div className="Resume-item">
-        	<a href='https://github.com/lucasdurand' target='_blank'><img className="inverted" alt="GitHub" src={github} height={logosize}/></a>
+        	<a href='https://github.com/lucasdurand' target='_blank'><img className="inverted" alt="GitHub" src={github} width={logosize}/></a>
         </div>
       </div>
 		</div>
