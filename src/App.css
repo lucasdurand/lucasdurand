@@ -1,3 +1,7 @@
+a {
+  color:#fff;
+}
+
 .Resume-chunk {
   color:#fff;
   padding:5px;
@@ -42,6 +46,38 @@ padding:0;
   display:inline-block;
   text-align:left;
 }
+
+.quoteimg {
+  background: url('./blockquote.svg') top -3px left -3px no-repeat;
+  background-size: 50px 50px;  
+}
+
+
+.Quote p{
+  padding:0px;
+  margin:15px 10px;
+}
+
+.Infront{
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+}
+
+.Bio {
+  font-size:1.3em;
+  background-color:rgba(33,33,33,0.75);
+  font-family: Garamond, Georgia, times, mono;
+  color:#ccc;
+  border-radius:10px;
+  text-align:justify;
+  text-indent: 20px;
+  padding:10px;
+  padding-top:5px;
+
+}
+
 .Resume-spacer {
   background-color:none;
 }
@@ -99,7 +135,8 @@ padding:0;
   position:relative;
   display:inline-block;
   color:white;
-  font-family:Garamond, serif;
+  /*font-family:Garamond, serif;*/
+  font-family:monotype, mono, sans;
   font-size:1.5em;
   padding:10px;
   font-style:bold;
@@ -130,6 +167,7 @@ padding:0;
   vertical-align:top; 
   font-weight: bold;
   margin:10px;
+  font-style: italic;
   /*width:10%;*/
   /*transform:rotate(-90deg);*/
   /*writing-mode: vertical-rl;
@@ -145,6 +183,7 @@ padding:0;
 }
 
 .Skill-circle {
+  position:relative;
   display:inline-block;
   padding:10px;
   transition: all 1s ease, width 1s ease;
@@ -189,7 +228,6 @@ padding:0;
   text-align:center;
   /*margin:0px 20px;*/
   /*font-size: 1.5em;*/
-  font-family:Garamond, serif;
   /*border:2px solid #222;*/
 }
 
@@ -209,4 +247,3 @@ padding:0;
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-<h4 className="Resume-title">Courses Completed:</h4>

@@ -67,9 +67,9 @@ export class Pie extends Component {
   		 railColor={null}
   		 height={hw}
   		 width={hw}
-  		 labelColor="rgba(204,204,204,0.9)" //
+  		 labelColor="rgba(255, 255, 255,0.85)" //
   		 labelFontSize={hw/5}
-  		 strokeColor="rgba(250, 250, 250,0.7)" //circle
+  		 strokeColor="rgba(255, 255, 255,0.85)" //circle
  		/>
 	)
   }

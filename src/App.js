@@ -7,6 +7,7 @@ import Masterpiece from './lucas.js';
 import td from './td.svg';
 import nbfm from './nbc.svg';
 import uoft from './uoft.svg';
+import blockquote from './blockquote.svg';
 import york from './york.png';
 import sax from './sax.svg';
 import atom from './atom.svg';
@@ -24,15 +25,20 @@ import languages from './languages.json';
 import { Pie, Venn } from './plots.js';
 import {Doughnut} from 'react-chartjs-2';
 import shuffle from 'shuffle-array';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import './Transition.css';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
+    const today = new Date();
+
     this.state={interests:interests,
       activeInterest:-1,
       languages:[],
-      width:props.width};
+      width:props.width,
+      today:today};
   }
 
   componentDidMount(){
@@ -126,33 +132,56 @@ class App extends Component {
 
 <div className="Spacer"/>
 {this.state.me? null: ( <div>
+
+  <div className="Resume-chunk">
+    <div className="Bio quoteimg" onClick={()=>this.setState({quote:!this.state.quote})}>
+        <div className="Quote">
+          <p> I got my start in finance {this.state.today.getFullYear()-2014} years ago...</p> 
+      
+        <ReactCSSTransitionGroup
+        transitionName="fade"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={300}>
+          {this.state.quote?(
+            <div className="Quote" key={1}>
+              <p>I broke from my studies in theoretical physics to take a seat on the trading floor of a major Canadian bank. During the two summers spent there, I simultaneously learned about Equities Trading, Python, and to always be watchful for errant nerf balls.</p>
+              <p>Since then, I've taken on a number of roles in the fintech space as part of the TD Technology Solutions Associate Program, with a focus on Quantitative Analytics and Data Science</p>
+              <p>More and more I see the power of outsiders in this industry, where unconventional backgrounds and broad skillsets catalyse big successes. I'm happy now to be bringing some otherworldly thinking to the stellar TD Securities Valuation Services team.</p>
+             </div>): null }
+        </ReactCSSTransitionGroup>
+      </div>
+    </div>
+  </div>
+
 <div>
   <div className="Resume-chunk">
-    <Element name="skills"><h2 className="Resume-chunk">Skills</h2>
+    <Element name="skills"><h2 className="Resume-chunk">Interests</h2>      
       <div className="Noverflow">
         {this.state.interests.map((interest,i)=>
             <div key={interest.id} className="Skill-circle" onMouseEnter={()=>this.setState({activeInterest:interest.id})} onMouseLeave={()=>this.setState({activeInterest:-1})}>
+
+              <ReactCSSTransitionGroup
+                transitionName="fade"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}>
+
               {this.state.activeInterest === interest.id?
-                <ul>
+                <div className="Infront">
+                <ul key={interest.id} className="Resume-item">
                 {interest.skills.map((skill,j)=>
                   <li key={j}>{skill}</li> 
                   )}
                 </ul>
-              : <Pie percent={interest.percentage} width={100} />
+                </div>
+              : null
               }
+            </ReactCSSTransitionGroup>
+            <div key={interest.id+1 /*just to trigger transition*/}>
+                  <Pie percent={interest.percentage}  width={100} />
+                </div>
             <h4>{interest.name}</h4>
-            </div>  
+          </div>  
           )}
-      </div>
-      <div className="Noverflow">
-        <h2 className="Resume-chunk">Languages</h2>
-        <Doughnut data={this.state.languages} height={Math.min(300,this.state.width)} legend={{
-        display: true,
-        position: 'bottom',
-        fullWidth: false,
-        reverse: false,
-        labels: {
-          fontColor: '#fff'}}}/>
       </div>
     </Element>
   </div>
@@ -162,6 +191,24 @@ class App extends Component {
   <div className="Resume-chunk">
 	<Element name="exp"><h2 className="Resume-chunk">Work</h2>
   	<div>
+      <p className="dates">Feb 2018 - Present</p>
+      <div className="Resume-item">
+        <img  src={td} width={logosize}/>
+      </div>
+      <ul className="Resume-item">
+        <h3 className="Resume-title">Developer</h3>
+        <div className="Resume-role">TD Securities - Derivatives, Valuation and Trading Risk</div>
+        <li>Engineering, developing and enhancing over 40 micro services covering core data platform, calculations and information platform</li>
+        <li>Utilize latest technology with a fresh approach to financial services software engineering</li>
+        <li>Implement Jupyter Notebook framework, designing python notebooks to enhance toolkits of power users</li>
+        <li>Extend applications for Python wrapping of quant library</li>
+        <li>Rapid development of ReactJS trading risk PoC, leveraging common components</li>
+        <li>Development of Spark aggregation server with Scala</li>
+        <hr/>
+      <li>Led ML group project: developed convolutional neural network to identify camera models from photos</li></ul>
+    </div>
+
+    <div>
           <p className="dates">Aug 2017 - Feb 2018</p>
           <div className="Resume-item">
             <img  src={td} width={logosize}/>
@@ -169,14 +216,18 @@ class App extends Component {
           <ul className="Resume-item">
           	<h3 className="Resume-title">Quant Developer</h3>
           	<div className="Resume-role">TD Securities - Quantitative Modelling & Analytics</div>
-          	<li> Responsible for development and implementation of sophisticated derivatives pricing and risk models, exposing functionality to Excel and Java interfaces
-          </li><li>Deliver Testing Harness PoC to perform continuous integration testing between local, server, and downstream valuation platforms
-          </li><li>Implement infrastructure to expose library to Python, integrate with build
-          </li><hr/>
-          <li>Led Machine Learning group learning course. Cover key Data Science technniques with ongoing projects
-          </li><li> Winner of TD Bank's Hackathon with development of novel model to predict customer life moments
-          </li><li> Develop network of Chatbots, providing easy access to a variety of useful data and algorithms
-          </li></ul>
+          	<li> Responsible for development and implementation of sophisticated derivatives pricing and risk models, exposing functionality to Excel and Java interfaces</li>
+            <li>Deliver Testing Harness PoC to perform continuous integration testing between local, server, and downstream valuation platforms</li>
+            <li>Implement infrastructure to expose library to Python, integrate with build</li>
+  
+            <hr/>
+            <li>Led Machine Learning group learning course. Cover key Data Science technniques with ongoing projects</li>
+            <li> Winner of TD Bank's Hackathon with development of novel model to predict customer life moments</li>
+            <li> Develop chatbot framework, providing easy access to a variety of useful data and algorithms</li>
+            <b>Lunch and Learn Topics:</b>
+            <li>Finite Difference Methods</li>
+            <li>Option Pricing with Fast Fourier Transforms</li>
+          </ul>
       </div>
       <div>    
           <p className="dates">Feb 2017 - Jul 2018</p>
@@ -186,11 +237,14 @@ class App extends Component {
           <ul className="Resume-item">
           	<h3 className="Resume-title">Quant Developer</h3>
           	<div className="Resume-role">TD Bank - Treasury Analytics Group</div>
-  			<li>Leverage data visualization tools to deliver interactive mortgage-backed security (MBS) valuation module to business leaders</li>
+      			<li>Leverage data visualization tools to deliver interactive mortgage-backed security (MBS) valuation module to business leaders</li>
   	        <li> Benchmark and stability testing of quasi-Monte Carlo method allows for Key Rate Vega and Convexity hedging   </li>
-  	        <li> Presented <i>Lunch n' Learn</i> featuring real-time code execution and animations</li>
-  	        <hr/>
-            Course Completed:
+            <li> Presented <i>Lunch n' Learn</i> featuring real-time code execution and animations</li>
+            <hr/>
+            <b>Lunch and Learn Topics:</b>
+            <li>Monte Carlo Simulations</li>
+            <li>Mortgage-Backed Security Valuation</li>
+            <b>Course Completed:</b>
   	        <li>Udemy - Data Science and Machine Learning with Python</li>
           </ul>
       </div>
@@ -207,7 +261,7 @@ class App extends Component {
             <li>Subject Matter Expert (SME) for Identity & Access Management. Developed Role-Based Access Management tools to automate RBAC reporting</li>
             <li>Interfaced between business and Testing Centre of Excellence to facilitate continuous testing on vendor platform delivery</li>
             <hr/>
-            Courses Completed:
+            <b>Courses Completed:</b>
               <li> Global Knowledge - IBM BigInsights Foundation </li>
               <li> Coursera (Columbia University) - Financial Engineering and Risk Management Part I</li> 
           </ul>
@@ -220,9 +274,12 @@ class App extends Component {
           <ul className="Resume-item">
             <h3 className="Resume-title">Teaching & Research Assistant</h3>
             <div className="Resume-role">York University, Tulin Research Group</div>
-
-            <li>Maintained a broad knowledge of general science to lead tutorials in <i>Science, Technology & the Environment</i> as well as  weekly topics relevant to <i>Engineering/Physics Labs</i></li>
+            <li>Maintained a broad knowledge of general science to lead tutorials</li>
             <li>Worked to promote a holistic understanding of difficult concepts through the use of qualitative, quantitative, analytic and synthetic thinking while efficiently assessing a high volume of student problem sets and assignments</li>
+            <b>TA for courses:</b>
+            <li>Engineering/Physics Lab</li>
+            <li>Scienced, Technology & the Environment</li>
+            <li>Electricity and Magnetism</li>
           </ul>
       </div>
 
@@ -262,8 +319,7 @@ class App extends Component {
         			<ul className="Resume-item">
         			<h3 className="Resume-title">MSc., Theoretical Physics</h3>
 		        	<div className="Resume-role">York University, Perimeter Institute (PI)</div>
-		        		<li>TA: Engineering/Physics Lab; Science, Technology & the Environment</li>
-		        		<li>Major Research Project: <i>inSIDious</i> Matter</li>
+		        		<li><a href="https://github.com/lucasdurand/Dark-Matter">Major Research Project: <i>inSIDious</i> Matter</a></li>
 	        		</ul>
         		</div>
         		<div>
@@ -294,6 +350,20 @@ class App extends Component {
 	</div>
 
   <Element name="more">
+    <div className="Noverflow">
+      <div className="Resume-chunk">
+        <h2 className="Resume-chunk">Languages</h2>
+
+        <Doughnut data={this.state.languages} height={Math.min(400,this.state.width)} width={Math.min(400,this.state.width)} legend={{
+        display: true,
+        position: 'bottom',
+        fullWidth: false,
+        reverse: false,
+        labels: {
+          fontColor: '#fff'}}}/>
+      </div>
+    </div>
+
     <div>
       <div className="Resume-chunk">
       <h2 className="Resume-chunk">Volunteering</h2>

@@ -3,14 +3,14 @@
     "id":1,
     "name":"Machine Learning",
     "percentage":55,
-    "skills":["Keras","Scikit-Learn","MLLib","NLP","Time-series"]
+    "skills":["Keras","Scikit-Learn","MLLib","NLP"]
   },
 
   {
     "id":2,
     "name":"Quantitative Modelling",
     "percentage":85,
-    "skills":["Fixed Income","Option Pricing","Bi/Trinomial Trees","FFT","Monte Carlo"]
+    "skills":["Option Pricing","Bi/Trinomial Trees","FFT","Monte Carlo"]
   },
   
   {
@@ -23,12 +23,12 @@
     "id":5,
     "name": "Application Dev",
     "percentage":80,
-    "skills":["reactjs","nodejs","Flask","electron"]
+    "skills":["ReactJS","NodeJS","Flask","electron"]
   },
   {
     "id":4,
     "name":"Big Data",
     "percentage":40,
-    "skills":["Hadoop","Spark","Pandas"]
+    "skills":["Hadoop","Spark","Pandas","SQL"]
   }
 ] 
