@@ -148,16 +148,15 @@ padding:0;
 
 .Nav-button:hover {
   border-bottom:2px solid #ccc;
-  border-top:2px solid #ccc;
   color:#ccc;
-  transition: color 1s ease-in-out, border 1s ease;
+  transition: all 1s ease;
 }
 
 .Nav-button.active {
   border-bottom:2px solid #ccc;
-  border-top:2px solid #ccc;
+  background-color:rgba(140,140,140,0.1);
   color:#ccc;
-  transition: color 1s ease-in-out, border 1s ease;
+  transition: all 0.5s ease-in-out;
 }
 .inverted {
   filter:invert(100%);
