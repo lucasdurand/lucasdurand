@@ -192,11 +192,9 @@ class App extends Component {
 	<Element name="exp"><h2 className="Resume-chunk">Work</h2>
   	<div>
       <p className="dates">Feb 2018 - Present</p>
-      <div className="Resume-item">
-        <img  src={td} width={logosize}/>
-      </div>
+        <img className="Resume-item" src={td} width={logosize}/>
       <ul className="Resume-item">
-        <h3 className="Resume-title">Developer</h3>
+        <h3 className="Resume-title">Engineer</h3>
         <div className="Resume-role">TD Securities - Derivatives, Valuation and Trading Risk</div>
         <li>Engineering, developing and enhancing over 40 micro services covering core data platform, calculations and information platform</li>
         <li>Utilize latest technology with a fresh approach to financial services software engineering</li>
@@ -210,9 +208,9 @@ class App extends Component {
 
     <div>
           <p className="dates">Aug 2017 - Feb 2018</p>
-          <div className="Resume-item">
-            <img  src={td} width={logosize}/>
-          </div>
+
+          <img className="Resume-item" src={td} width={logosize}/>
+
           <ul className="Resume-item">
           	<h3 className="Resume-title">Quant Developer</h3>
           	<div className="Resume-role">TD Securities - Quantitative Modelling & Analytics</div>
@@ -231,9 +229,7 @@ class App extends Component {
       </div>
       <div>    
           <p className="dates">Feb 2017 - Jul 2018</p>
-          <div className="Resume-item">
-            <img  src={td} width={logosize}/>
-          </div>
+            <img className="Resume-item" src={td} width={logosize}/>
           <ul className="Resume-item">
           	<h3 className="Resume-title">Quant Developer</h3>
           	<div className="Resume-role">TD Bank - Treasury Analytics Group</div>
@@ -251,9 +247,7 @@ class App extends Component {
 
       <div>    
           <p className="dates">Jul 2016 - Feb 2018</p>
-          <div className="Resume-item">
-            <img  src={td} width={logosize}/>
-          </div>
+            <img  src={td} width={logosize} className="Resume-item"/>
           <ul className="Resume-item">
             <h3 className="Resume-title">Business Systems Analyst</h3>
             <div className="Resume-role">TD Bank - Enterprise Fraud Analytics Program</div>
@@ -268,9 +262,7 @@ class App extends Component {
       </div>
       <div>    
           <p className="dates">Sep 2014 - Apr 2016</p>
-          <div className="Resume-item">
-            <img  src={york} width={logosize}/>
-          </div>
+            <img  src={york} className="Resume-item" width={logosize}/>
           <ul className="Resume-item">
             <h3 className="Resume-title">Teaching & Research Assistant</h3>
             <div className="Resume-role">York University, Tulin Research Group</div>
@@ -285,9 +277,9 @@ class App extends Component {
 
       <div>    
           <p className="dates">Apr 2014 - Sep 2015</p>
-          <div className="Resume-item">
-            <img  src={nbfm} width={logosize}/>
-          </div>
+
+          <img className="Resume-item" src={nbfm} width={logosize}/>
+
           <ul className="Resume-item">
             <h3 className="Resume-title">Application Analyst</h3>
             <div className="Resume-role">NBFM - Equities Trade Support</div>
