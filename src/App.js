@@ -27,6 +27,8 @@ import {Doughnut} from 'react-chartjs-2';
 import shuffle from 'shuffle-array';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './Transition.css';
+import Menu from 'react-burger-menu/lib/menus/slide';
+import './Burger.css';
 
 class App extends Component {
 
@@ -38,7 +40,8 @@ class App extends Component {
       activeInterest:-1,
       languages:[],
       width:props.width,
-      today:today};
+      today:today,
+      menuOpen:false};
   }
 
   componentDidMount(){
@@ -48,8 +51,9 @@ class App extends Component {
       console.log("begin", arguments);
     });
  
-    Events.scrollEvent.register('end', function(to, element) {
-      console.log("end", arguments);
+    Events.scrollEvent.register('end', (to, element) => {
+      //console.log("end", arguments);
+      this.closeBurger();
     });
 
     scrollSpy.update();
@@ -61,6 +65,11 @@ class App extends Component {
   componentWillUnmount() {
     Events.scrollEvent.remove('begin');
     Events.scrollEvent.remove('end');
+  }
+
+
+  closeBurger(){
+    this.setState({menuOpen:false,});
   }
 
   constructLanguages(langs){
@@ -104,35 +113,70 @@ class App extends Component {
   return (
 	<ParallaxProvider>
       <div className="App">
-      {this.state.width>500? ParallaxBack():null}	
-      <header className="App-header">
-      <div className={this.state.me?"Nav-button active":"Nav-button App-title"} onClick={()=>{scroll.scrollToTop(); if(this.state.me){this.setState({me:false})}}} onDoubleClick={()=>this.setState({me:!this.state.me,})}>{this.state.me? 'Back to CV':'Lucas Durand'}</div>
-      {this.state.width>500 && !this.state.me? (
-      <div className="Nav-bar">
-          <Link activeClass="active" className="Nav-button" to="exp" spy={true} smooth={true} offset={-headerheight} duration={500}>
-        		Work
-        	</Link>
-          
-          <Link activeClass="active" className="Nav-button" to="education" spy={true} smooth={true} offset={-headerheight} duration={500}>
-        		Education
-        	</Link>
-          
-          <Link activeClass="active" className="Nav-button" to="more" spy={true} smooth={true} offset={-headerheight} duration={500}>
-            More
-          </Link>
 
-          <Link activeClass="active" className="Nav-button" to="contact" spy={true} offset={-headerheight} smooth={true} duration={500}>
-        		Contact
-        	</Link>
-      </div>
-        ): null}
-      </header>
+      {this.state.width>500? ParallaxBack():null}	
+      {this.state.width>500? (
+        <div>
+          <header className="App-header">
+          
+          <div className="Nav-bar">
+
+              <div className="Nav-bar"  onClick={()=>{ if(this.state.me){this.setState({me:false})}}} onDoubleClick ={()=>this.setState({me:!this.state.me,})}><Link activeClass="active" className="Nav-button" to="lucas" spy={true} smooth={true} offset={-2*headerheight} duration={500}>{this.state.me? 'Back to CV':'Lucas Durand'}</Link></div>
+              <Link activeClass="active" className="Nav-button" to="exp" spy={true} smooth={true} offset={-headerheight} duration={500}>
+            		Work
+            	</Link>
+              
+              <Link activeClass="active" className="Nav-button" to="education" spy={true} smooth={true} offset={-headerheight} duration={500}>
+            		Education
+            	</Link>
+              
+              <Link activeClass="active" className="Nav-button" to="more" spy={true} smooth={true} offset={-headerheight} duration={500}>
+                More
+              </Link>
+
+              <Link activeClass="active" className="Nav-button" to="contact" spy={true} offset={-headerheight} smooth={true} duration={500}>
+            		Contact
+            	</Link>
+          </div>
+
+          </header>
+
+        <div className="Spacer"/>
+        </div>
+      ): 
+      <Menu isOpen={this.state.menuOpen} width={200}>
+        <Link className="Burger-nav-button" activeClass="active" to="lucas" spy={true} smooth={true} offset={-2*headerheight} duration={500}>
+          <div onClick={()=>{ if(this.state.me){this.setState({me:false})}}} onDoubleClick ={()=>this.setState({me:!this.state.me,})}>
+            {this.state.me? 'Back':'Me'}
+          </div>
+        </Link>
+
+        <Link className="Burger-nav-button" activeClass="active" to="exp" spy={true} smooth={true} offset={-headerheight} duration={500}>
+          Work
+        </Link>
+        
+        <Link className="Burger-nav-button" activeClass="active" to="education" spy={true} smooth={true} offset={-headerheight} duration={500}>
+          Education
+        </Link>
+        
+        <Link className="Burger-nav-button" activeClass="active" to="more" spy={true} smooth={true} offset={-headerheight} duration={500}>
+          More
+        </Link>
+
+        <Link className="Burger-nav-button" activeClass="active" to="contact" spy={true} offset={-headerheight} smooth={true} duration={500}>
+          Contact
+        </Link>
+  
+      </Menu>
+      }
 
       {this.state.width<=500 && this.state.me? <div className="Mobile-art"><Masterpiece/></div>:null}
 
-<div className="Spacer"/>
 {this.state.me? null: ( <div>
-
+<Element name="lucas">
+  <div>
+    <h1 className="Resume-chunk App-title">Lucas Durand</h1>
+  </div>
   <div className="Resume-chunk">
     <div className="Bio quoteimg" onClick={()=>this.setState({quote:!this.state.quote})}>
         <div className="Quote">
@@ -186,7 +230,7 @@ class App extends Component {
     </Element>
   </div>
 </div>
-
+</Element>
 <div>
   <div className="Resume-chunk">
 	<Element name="exp"><h2 className="Resume-chunk">Work</h2>

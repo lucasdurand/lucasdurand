@@ -137,8 +137,8 @@ padding:0;
   color:white;
   /*font-family:Garamond, serif;*/
   font-family:monotype, mono, sans;
-  font-size:1.5em;
-  padding:10px;
+  font-size:1em;
+  padding:15px;
   font-style:bold;
   /*font-variant: small-caps;*/
   vertical-align:middle;
@@ -206,7 +206,7 @@ padding:0;
 
 .Spacer {
   position:relative;
-  margin-top:50px;
+  margin-top:60px;
 }
 
 .App-header {
