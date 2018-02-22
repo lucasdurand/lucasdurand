@@ -445,7 +445,7 @@ class App extends Component {
         <p className="dates">2017 - Present</p>
         <img className="Resume-item" src={chair} width={logosize}/>
         <div className="Resume-item">
-          <h3 className="Resume-title">Second Chair Solutions Ltd.</h3>
+          <h3 className="Resume-title">Second Chair Solutions inc.</h3>
           Director of the Board
         </div>
       </div>
