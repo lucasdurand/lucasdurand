@@ -28,7 +28,7 @@
   {
     "id":4,
     "name":"Big Data",
-    "percentage":40,
+    "percentage":70,
     "skills":["Hadoop","Spark","Pandas","SQL"]
   }
 ] 

@@ -238,16 +238,22 @@ class App extends Component {
       <p className="dates">Feb 2018 - Present</p>
         <img className="Resume-item" src={td} width={logosize}/>
       <ul className="Resume-item">
-        <h3 className="Resume-title">Engineer</h3>
+        <h3 className="Resume-title">Data Science Engineer</h3>
         <div className="Resume-role">TD Securities - Derivatives, Valuation and Trading Risk</div>
         <li>Engineering, developing and enhancing over 40 micro services covering core data platform, calculations and information platform</li>
         <li>Utilize latest technology with a fresh approach to financial services software engineering</li>
-        <li>Implement Jupyter Notebook framework, designing python notebooks to enhance toolkits of power users</li>
+        <li>Own implementation of JupyterHub for enterprise</li>
+        <li>Design python notebooks to enhance toolkits of power users</li>
         <li>Extend applications for Python wrapping of quant library</li>
-        <li>Rapid development of ReactJS trading risk PoC, leveraging common components</li>
-        <li>Development of Spark aggregation server with Scala</li>
-        <hr/>
-      <li>Led ML group project: developed convolutional neural network to identify camera models from photos</li></ul>
+        <li>Development of Spark analytics engine with Scala</li>
+      <hr/>
+        <b>Machine Learning Group:</b>
+        <li>Led development of convolutional neural network to identify camera models from photos</li>
+        <b>Courses Completed:</b>
+        <li>Fitch Learning - Equities 102</li>
+        <li>Fitch Learning - Derivatives 102</li>
+        <li>Fitch Learning - Fixed Income 102</li>
+      </ul>
     </div>
 
     <div>
@@ -263,9 +269,11 @@ class App extends Component {
             <li>Implement infrastructure to expose library to Python, integrate with build</li>
   
             <hr/>
-            <li>Led Machine Learning group learning course. Cover key Data Science technniques with ongoing projects</li>
-            <li> Winner of TD Bank's Hackathon with development of novel model to predict customer life moments</li>
             <li> Develop chatbot framework, providing easy access to a variety of useful data and algorithms</li>
+        <b>Machine Learning Group:</b>
+            <li>Led group learning course. Cover key Data Science technniques with ongoing projects</li>
+            <li> Winner of TD Bank's Hackathon with development of novel model to predict customer life moments</li>
+            
             <b>Lunch and Learn Topics:</b>
             <li>Finite Difference Methods</li>
             <li>Option Pricing with Fast Fourier Transforms</li>
@@ -440,7 +448,7 @@ class App extends Component {
   </div>
   <div>
     <div className="Resume-chunk">
-      <h2 className="Resume-chunk">Leadership</h2>
+      <h2 className="Resume-chunk">Leadership</h2>-
       <div>
         <p className="dates">2017 - Present</p>
         <img className="Resume-item" src={chair} width={logosize}/>
