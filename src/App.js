@@ -238,13 +238,12 @@ class App extends Component {
       <p className="dates">Feb 2018 - Present</p>
         <img className="Resume-item" src={td} width={logosize}/>
       <ul className="Resume-item">
-        <h3 className="Resume-title">Data Science Engineer</h3>
-        <div className="Resume-role">TD Securities - Derivatives, Valuation and Trading Risk</div>
-        <li>Engineering, developing and enhancing over 40 micro services covering core data platform, calculations and information platform</li>
-        <li>Utilize latest technology with a fresh approach to financial services software engineering</li>
-        <li>Own implementation of JupyterHub for enterprise</li>
-        <li>Design python notebooks to enhance toolkits of power users</li>
-        <li>Extend applications for Python wrapping of quant library</li>
+        <h3 className="Resume-title">Data Science Tooling Lead</h3>
+        <div className="Resume-role">TD Securities - Cross Asset Platform Technology</div>
+        <li>Toronto Team Lead: manage group of developers and data scientists</li>
+        <li>Python SME for wider TDS</li>
+        <li>Own implementation of JupyterHub for enterprise and organically grow user base to 300 users in two years</li>
+        <li>Develop API and Dashboard deployment pipelines for rapid prototyping</li>
         <li>Development of Spark analytics engine with Scala</li>
       <hr/>
         <b>Machine Learning Group:</b>
