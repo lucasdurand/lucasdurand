@@ -1,0 +1,23 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Work Experience
+    chapters:
+    - file: td
+    - file: aidd
+    - file: yorkta
+    - file: nbfm
+  - caption: Community
+    chapters:
+    - file: python
+  - caption: Projects
+    chapters:
+    - file: languages
+  - caption: Education
+    chapters:
+    - file: york
+    - file: perimeter
+    - file: uoft

@@ -1,0 +1,5 @@
+jupyter-book
+pyppeteer
+pandas
+numpy
+plotly
