@@ -19,7 +19,7 @@ After updating the markdown and notebooks that make up the book site, you may wa
 
 And in the case of building a *resume-style* version, you can create a single-page html that is saved as pdf with:
 
-`pipenv run jb build ./ --builder=pdfhtml`
+`pipenv run jb build ./ --builder=pdfhtml --toc=_resume_toc.yml`
 
 This may overwrite the `index.html` from the "real site", so be careful to re-generate that before deploying
 
