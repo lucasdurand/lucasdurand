@@ -12,7 +12,8 @@ parts:
     - file: nbfm
   - caption: Community
     chapters:
-    - file: python
+    - file: speaking
+    - file: volunteer
   - caption: Projects
     chapters:
     - file: languages
