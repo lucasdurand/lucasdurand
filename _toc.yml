@@ -10,13 +10,13 @@ parts:
     - file: aidd
     - file: yorkta
     - file: nbfm
+  - caption: Projects
+    chapters:
+    - file: languages
   - caption: Community
     chapters:
     - file: speaking
     - file: volunteer
-  - caption: Projects
-    chapters:
-    - file: languages
   - caption: Education
     chapters:
     - file: york
