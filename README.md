@@ -1,24 +1,31 @@
 # lucasdurand
-A little personal resume site
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](http://lucasdurand.xyz)
+
+A little personal resume site built with Jupyter Book
 
 ## Development
 
-### Start the development server:
+Get started by installing the environment. You can do this with:
 
-`npm start`
+### Pipenv
 
-Change things. Hot reload!
+`pipenv install`
 
-### Deploy to Github
+## Build
 
-Optimized build, and live deployment to github.io
+After updating the markdown and notebooks that make up the book site, you may want to re-build the site:
 
-`npm run deploy`
+`pipenv run jb build ./`
 
-## TODO
-- Better Reactivity/Mobile Browser
-- Add "Skills" beside entries
-- Dates
-- Pull data from JSON and generate html
+And in the case of building a *resume-style* version, you can create a single-page html that is saved as pdf with:
 
-- (Much Later) JSON -> Jinja -> TeX -> PDF 
+`pipenv run jb build ./ --builder=pdfhtml`
+
+This may overwrite the `index.html` from the "real site", so be careful to re-generate that before deploying
+
+
+## Deploy to Github Pages
+
+When changes are ready to deploy, deploy!
+
+`pipenv run ghp-import _build` deployment to the gh-pages branch, served from github.io and available behind http://lucasdurand.xyz
