@@ -1,24 +1,5 @@
-# lucasdurand
-A little personal resume site
+# Bonjour Hello!
 
-## Development
+I'm a Data Scientist / Python Engineer that's passionate about building things that empower others. But more on that here: [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](http://lucasdurand.xyz)
 
-### Start the development server:
-
-`npm start`
-
-Change things. Hot reload!
-
-### Deploy to Github
-
-Optimized build, and live deployment to github.io
-
-`npm run deploy`
-
-## TODO
-- Better Reactivity/Mobile Browser
-- Add "Skills" beside entries
-- Dates
-- Pull data from JSON and generate html
-
-- (Much Later) JSON -> Jinja -> TeX -> PDF 
+If you are me and came here to remember how to update the above site, you want to be [here](README-dev.md), instead.

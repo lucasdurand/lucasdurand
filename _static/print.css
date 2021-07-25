@@ -1,0 +1,9 @@
+@media print {
+    .bd-toc {
+        visibility: hidden;
+    }
+    .col-md-9 {
+        max-width: unset !important;
+        flex: unset !important;
+    }
+}

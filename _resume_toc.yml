@@ -1,0 +1,19 @@
+# Resume Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Work Experience
+    chapters:
+    - file: work
+    - file: td
+    - file: aidd
+    - file: yorkta
+    - file: nbfm
+  - caption: Education
+    chapters:
+    - file: education
+    - file: york
+    - file: perimeter
+    - file: uoft
