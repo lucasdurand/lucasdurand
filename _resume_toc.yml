@@ -5,14 +5,15 @@ format: jb-book
 root: intro
 parts:
   - caption: Work Experience
-    title: Work
     chapters:
+    - file: work
     - file: td
     - file: aidd
     - file: yorkta
     - file: nbfm
   - caption: Education
     chapters:
+    - file: education
     - file: york
     - file: perimeter
     - file: uoft

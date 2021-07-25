@@ -1,4 +1,4 @@
-# Summary 
+## Summary 
 
 I got my start in finance 7 years ago... I broke from my studies in theoretical physics to take a seat on the trading floor of a major Canadian bank. During the two summers spent there, I simultaneously learned about Equities Trading, Python, and to always be watchful for errant nerf balls. Since then, I've taken on a number of roles across TD Securities with a focus on Quantitative Analytics and Data Science, always with a grounding in Technology.
 

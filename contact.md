@@ -1,4 +1,4 @@
-# Contact
+## Contact
 
 I'm generally interested in contributing to innovative organizations through partnership, collaboration, and teaching. Reach me by the digital channel of your choosing:
 <div style="display: flex; justify-content: center;">
