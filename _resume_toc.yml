@@ -6,14 +6,14 @@ root: intro
 parts:
   - caption: Work Experience
     chapters:
-    - file: work
-    - file: td
-    - file: aidd
-    - file: yorkta
-    - file: nbfm
+    - file: work/work
+    - file: work/td
+    - file: work/aidd
+    - file: work/yorkta
+    - file: work/nbfm
   - caption: Education
     chapters:
-    - file: education
-    - file: york
-    - file: perimeter
-    - file: uoft
+    - file: education/education
+    - file: education/york
+    - file: education/perimeter
+    - file: education/uoft

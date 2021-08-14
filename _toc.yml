@@ -2,25 +2,25 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: home/intro
 parts:
   - caption: Work Experience
     chapters:
-    - file: td
-    - file: aidd
-    - file: yorkta
-    - file: nbfm
+    - file: work/td
+    - file: work/aidd
+    - file: work/yorkta
+    - file: work/nbfm
   - caption: Projects
     chapters:
-    - file: languages
+    - file: projects/languages
     - url: http://futuremoney.herokuapp.com/
       title: Saving For A Down Payment
   - caption: Community
     chapters:
-    - file: speaking
-    - file: volunteer
+    - file: misc/speaking
+    - file: misc/volunteer
   - caption: Education
     chapters:
-    - file: york
-    - file: perimeter
-    - file: uoft
+    - file: education/york
+    - file: education/perimeter
+    - file: education/uoft
