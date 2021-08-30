@@ -2,7 +2,7 @@
 
 *MSc., Theoretical Physics*
 
-[**Major Research Project**: inSIDious Matter](https://github.com/lucasdurand/Dark-Matter)
+[**Major Research Project**: inSIDious Matter](https://nbviewer.jupyter.org/github/lucasdurand/Dark-Matter/blob/master/Lucas%20Durand%20-%20Final.pdf)
 
 Throughout my graduate education I participated in a battery of challenging theoretical coursework, while balancing teaching responsibilities as well as the development of my original research. The focus of my major research project pertained to the frontier of new physics and required a broad knowledge of concepts from mathematical frameworks, to physical observations and numerical analysis, through in-depth coding in a handful of languages.
 
