@@ -13,8 +13,10 @@ parts:
   - caption: Projects
     chapters:
     - file: projects/languages
-    - url: http://futuremoney.herokuapp.com/
+    - url: https://futuremoney.herokuapp.com/
       title: Saving For A Down Payment
+    - url: https://cardiac-calculator.herokuapp.com/
+      title: (POC) Cardiac Obstretrics Risk Calculator
   - caption: Community
     chapters:
     - file: misc/speaking

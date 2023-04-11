@@ -1,6 +1,7 @@
 @media print {
-    .bd-toc {
+    .page-toc, .bd-toc, #jb-print-toc {
         visibility: hidden;
+        display: none;
     }
     .col-md-9 {
         max-width: unset !important;
