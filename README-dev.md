@@ -28,4 +28,4 @@ This may overwrite the `index.html` from the "real site", so be careful to re-ge
 
 When changes are ready to deploy, deploy!
 
-`pipenv run ghp-import _build/html -pon` deployment to the gh-pages branch, served from github.io and available behind http://lucasdurand.xyz. This should trigger a realtime update to the site. **Be sure to include the -n flag, or else the site won't render properly**
+`pipenv run ghp-import _build/html -pon` deployment to the gh-pages branch, served from github.io and available behind https://lucasdurand.xyz. This should trigger a realtime update to the site. **Be sure to include the -n flag, or else the site won't render properly**
