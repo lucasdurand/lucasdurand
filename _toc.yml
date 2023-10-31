@@ -13,10 +13,14 @@ parts:
   - caption: Projects
     chapters:
     - file: projects/languages
+    - url: https://lucasdurand.xyz/network-graph-tutorial/
+      title: Network Graph Tutorial
     - url: https://futuremoney.herokuapp.com/
       title: Saving For A Down Payment
     - url: https://cardiac-calculator.herokuapp.com/
-      title: (POC) Cardiac Obstretrics Risk Calculator
+      title: Cardiac Obstetrics Risk Calculator (POC)
+    - url: https://lucasdurand.xyz/visualization-seminar/
+      title: Visualization Seminar
   - caption: Community
     chapters:
     - file: misc/speaking

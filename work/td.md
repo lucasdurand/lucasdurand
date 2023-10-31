@@ -3,7 +3,19 @@
 I have been working in various Technology roles with the Toronto-Dominion Bank since 2016. During this time I've had the chance to grow as a Technologist, Data Scientist, and Finance professional. Some things that tie these experiences together are always jumping at opportunities to build community through shared knowledge and active teaching, and promoting a culture of ownership through evangelism.
 
 
-## Vice President - Data Science Engineering (2020-)
+## Director, Data Platform & Analytics (2023 - )
+
+Play a key role in driving strategy for the dealer's Data Platform with a focus on cloud migration and next-gen platform design
+
+Some topics include:
+* Platform Architecture
+* Data Mastering
+* End User Computing
+* Data Fabric
+* Data Mesh
+* Data Science Tooling
+
+## Vice President, Data Science Engineering (2020-2023)
 
 Head the Data Science Engineering team in TDS Technology, designing, building, and evangelizing platform tools for data science and analytics. This role has remits to lead both the Python/Notebooks Infrastructure and Data Science Technology teams.
 
@@ -33,7 +45,7 @@ Driving the design and development of an enterprise Data Science Platform. Grew 
 * Spark SQL
 * Python library design
 
-I was fortunate to be able to speak about this journey in the 2019 Python Canada Conference, [PyCon CA](https://2019.pycon.ca/talks/talk-111/)
+I was fortunate to be able to speak about this journey in the 2019 Python Canada conference, [PyCon CA](https://2019.pycon.ca/talks/talk-111/)
 
 
 ## Quantitative Developer Associate (2016-2018)
