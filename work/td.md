@@ -5,12 +5,13 @@ I have been working in various Technology roles with the Toronto-Dominion Bank s
 
 ## Director, Data Platform & Analytics (2023 - )
 
-Play a key role in driving strategy for the dealer's Data Platform with a focus on cloud migration and next-gen platform design
+I lead the Reference Data, Market Data, and Notebooks teams and play a key role in driving strategy for the dealer's Data Platform with a focus on cloud migration and next-gen platform design.
 
-Some topics include:
-* Platform Architecture
-* Data Mastering
-* End User Computing
+Some foci include:
+* Data Platform Architecture
+* Data Masters and Data Mastering
+* End User Computing and Citizen Development/Data
+* Data Management (Governance, Quality, Lineage, Catalog) 
 * Data Fabric
 * Data Mesh
 * Data Science Tooling
