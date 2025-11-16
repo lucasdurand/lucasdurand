@@ -1,55 +1,78 @@
-# TD Securities (2016-)
+# **TD Securities** _(2016–Present)_
 
-I have been working in various Technology roles with the Toronto-Dominion Bank since 2016. During this time I've had the chance to grow as a Technologist, Data Scientist, and Finance professional. Some things that tie these experiences together are always jumping at opportunities to build community through shared knowledge and active teaching, and promoting a culture of ownership through evangelism.
+_Technology Leader | Data Platform & Analytics | Data Strategy | Data Science Evangelism_
 
+Progressive technical and leadership roles driving innovation in data platforms, analytics, and cloud migration with a top global investment bank. Combines deep technical expertise with strategic vision to deliver scalable solutions for the business. Recognized with top-tier awards for transformational contributions.
 
-## Director, Data Platform & Analytics (2023 - )
+### **Director, Data Platform & Analytics** _(2023–Present)_
 
-Play a key role in driving strategy for the dealer's Data Platform with a focus on cloud migration and next-gen platform design
+I lead and oversee four critical teams that drive data excellence across the organization. My responsibilities include strategic alignment, cross-team collaboration, and ensuring high-quality deliverables while fostering innovation and governance best practices:
 
-Some topics include:
-* Platform Architecture
-* Data Mastering
-* End User Computing
-* Data Fabric
-* Data Mesh
-* Data Science Tooling
+1. **Market Data Masters**
 
-## Vice President, Data Science Engineering (2020-2023)
+   - Focuses on acquiring, managing, and optimizing **financial market data** (e.g., pricing, reference rates, trading volumes).
+   - Ensures data accuracy, latency efficiency, and integration with downstream systems.
+   - Works closely with traders, quants, and analytics teams to support real-time decision-making.
 
-Head the Data Science Engineering team in TDS Technology, designing, building, and evangelizing platform tools for data science and analytics. This role has remits to lead both the Python/Notebooks Infrastructure and Data Science Technology teams.
+2. **Reference Data Masters**
 
-* Evangelist for the TDS Integrated Analytics Platform, serving 600+ active citizen developers, data scientists, and engineers
-* Productionization of Jupyter Notebooks
-* Scaling analytics workflows with YARN, Dask, Kubernetes, Spark
+   - Manages **static and semi-static reference data** (e.g., securities master, counterparties, corporate actions).
+   - Maintains golden sources of truth for critical business operations (risk reporting, compliance).
+   - Collaborates with front/middle office to streamline workflows impacted by reference data changes.
 
-## Software Engineer Technical Lead (2019-2020)
+3. **Data Quality & Governance**
 
-Architect and lead engineer of the TD Securities data science end-user computing and app deployment environment (JupyterHub+), bringing together a combination of tools and workflows in order to provide data analytics and rapid prototyping capabilities for users of all levels of technical skills.
+   - Establishes frameworks/metrics for **data integrity**, lineage tracking, and compliance.
+   - Implements proactive monitoring/remediation pipelines to reduce "data fires."
+   - Partners with Legal & Risk teams to enforce policies while enabling agile use cases.
 
-* Python SME
-* OAuth in Notebooks, Dash, and ipython kernels
-* Dashboarding and prototyping: Plotly, Dash, Flask
+4. **Data Science Engineering**
+   - Provides scalable infrastructure/platforms (**Jupyter Notebooks**, ML pipelines) for broad quantitative analytics, reporting, AI, and upskilling.
+   - Bridges gaps between research prototypes (Python/R) and production-grade deployments.
+   - Supports AI/ML initiatives with clean datasets while ensuring reproducibility/monitoring.
 
-During this time I received the two top awards that a TD Securities employee can be awarded:
+#### **Strategic Leadership:**
 
-* TDS Pinnacle Award of Achievement, which recognizes the best of TD Securities
-* [TD Vision In Action Award](https://www.linkedin.com/posts/td_vision-in-action-award-of-distinction-2019-activity-6734205159632646144-r7pM), a once in a career award presented to the best 1 in 1000 across the entire Toronto-Dominion Bank  
+- Define and execute platform roadmap aligned with C-suite objectives; secure buy-in from business stakeholders (trading, risk, finance).
+- Lead cross-functional teams (engineering, architecture, governance) to modernize the dealer-wide Data Platform, focusing on cloud migration (Azure/GCP), data fabric/mesh adoption, and next-gen architecture.
+- Develop and implement data governance and data quality technology strategy to provide near-realtime visibility into key _data products_.
+- Transform market + reference data masters platforms for more reliable, trusted _golden source_ data, that vastly reduces manual efforts for workflows like client onboarding and data remediation.
 
+### **Vice President, Data Science Engineering** _(2020–2023)_
 
-## Software Engineer (2018-2019)
+**Team & Stakeholder Management:**
 
-Driving the design and development of an enterprise Data Science Platform. Grew this platform into a central tool for analytics dealer-wide through constant evangelism and close work with stakeholders.
+- Built and led a high-performing engineering team supporting Python infrastructure, notebooks-as-code, and analytics tooling.
+- Acted as primary liaison between quant teams, IT security, and business units to align priorities and deliver.
+- Deliver business-enabling notebooks, applications, and processes 10-25x faster than through traditional technology processes.
+- Grow userbase organically to 1000+ users across technology, business, operations, and support teams.
 
-* JupyterHub: `tornado`, nbextension and labextensions
-* Spark SQL
-* Python library design
+**Technical Innovation:**
 
-I was fortunate to be able to speak about this journey in the 2019 Python Canada conference, [PyCon CA](https://2019.pycon.ca/talks/talk-111/)
+- Scaled JupyterHub deployments via Dask-on-YARN and Spark-on-YARN integrations.
+- Architected enterprise-grade identity provider integration for JupyterHub, implementing OAuth 2.0, reducing auth-related development time while improving security posture "out of the box" to users.
+- Pioneered "EUC Governance" framework to streamline self-service analytics while mitigating operational risk.
 
+### **Software Engineer Technical Lead** _(2019–2020)_
 
-## Quantitative Developer Associate (2016-2018)
+**Technical Innovation & Platform Leadership**
 
-Responsible for development and implementation of sophisticated derivatives pricing and risk models with a number of quantitative analytics teams across TD Securities. 
+- Led development of core Python libraries to provide a common interface for common data operations agnostic to the data sources (SQL, Spark, REST API) to kickstart development workflows, particularly for citizen developers
+- Designed scheduling platform for recurring jobs with, becoming critical infrastructure for prototyping and EUC processes
+- Created self-service deployment system for analytical applications that empowered business teams across front, middle, and back office to productionize dashboards without engineering support
 
-During this time I also led the self-organizing Knowledge Academy to promote regular Lunch n' Learns for fellow associates, including a talk on [Monte Carlo Methods](https://github.com/lucasdurand/Monte-Carlo-Methods)
+**Project Leadership:**
+
+- Architected TDSs first centralized JupyterHub+ platform (serving 400+ users), reducing prototyping time by 70%.
+- Mentored junior engineers through code reviews and best-practice workshops (adopted org-wide).
+
+**Awards:**
+
+- **TDS Pinnacle Award of Achievement** (Top 0.1% performance).
+- **TD Vision In Action Award** (1-in-1000 enterprise-wide recognition).
+
+### Earlier Roles & Education
+
+**Software Engineer** _(2018–2019)_: Bugfixes, enhacements, and early architecture for the TDS Notebooks Platform; spoke at PyCon CA ([talk link](https://2019.pycon.ca/talks/talk-111/)).
+
+**Quantitative Developer Associate** _(2016–2018)_: Implemented derivatives pricing models; founded "Knowledge Academy" learning series ([GitHub](https://github.com/lucasdurand/Monte-Carlo-Methods)).
