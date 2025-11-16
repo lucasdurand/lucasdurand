@@ -71,7 +71,7 @@ I lead and oversee four critical teams that drive data excellence across the org
 - **TDS Pinnacle Award of Achievement** (Top 0.1% performance).
 - **TD Vision In Action Award** (1-in-1000 enterprise-wide recognition).
 
-### Earlier Roles & Education
+### Earlier Roles
 
 **Software Engineer** _(2018–2019)_: Bugfixes, enhacements, and early architecture for the TDS Notebooks Platform; spoke at PyCon CA ([talk link](https://2019.pycon.ca/talks/talk-111/)).
 
