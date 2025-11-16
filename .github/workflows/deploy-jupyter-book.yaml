@@ -49,7 +49,7 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build ./ --toc=_toc.yml --build=html
+          uv run jupyter-book build ./ --toc=_toc.yml --build=html
 
       # DEBUG: built book
       - name: Show build output location
