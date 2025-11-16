@@ -19,6 +19,9 @@ jobs:
     permissions:
       pages: write
       id-token: write
+    environment:
+      name: github-Pages
+      url: ${{steps.deployment.outputs.page_url}}
     steps:
       - uses: actions/checkout@v3
 
@@ -42,10 +45,20 @@ jobs:
           path: _build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
+      # DEBUG: folder structure
+      - name: Debug directory structure
+        run: ls -R ./
+
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build .
+          jupyter-book build ./
+
+      # DEBUG: built book
+      - name: Show build output location
+        run: |-
+          echo "Built files are located in:" 
+          ls _build/html/
 
       # Upload the book's HTML as an artifact
       - name: Upload artifact
