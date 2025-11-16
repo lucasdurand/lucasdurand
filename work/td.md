@@ -4,7 +4,7 @@ _Technology Leader | Data Platform & Analytics | Data Strategy | Data Science Ev
 
 Progressive technical and leadership roles driving innovation in data platforms, analytics, and cloud migration with a top global investment bank. Combines deep technical expertise with strategic vision to deliver scalable solutions for the business. Recognized with top-tier awards for transformational contributions.
 
-### **Director, Data Platform & Analytics** _(2023–Present)_
+## **Director, Data Platform & Analytics** _(2023–Present)_
 
 I lead and oversee four critical teams that drive data excellence across the organization. My responsibilities include strategic alignment, cross-team collaboration, and ensuring high-quality deliverables while fostering innovation and governance best practices:
 
@@ -31,14 +31,14 @@ I lead and oversee four critical teams that drive data excellence across the org
    - Bridges gaps between research prototypes (Python/R) and production-grade deployments.
    - Supports AI/ML initiatives with clean datasets while ensuring reproducibility/monitoring.
 
-#### **Strategic Leadership:**
+### **Strategic Leadership:**
 
 - Define and execute platform roadmap aligned with C-suite objectives; secure buy-in from business stakeholders (trading, risk, finance).
 - Lead cross-functional teams (engineering, architecture, governance) to modernize the dealer-wide Data Platform, focusing on cloud migration (Azure/GCP), data fabric/mesh adoption, and next-gen architecture.
 - Develop and implement data governance and data quality technology strategy to provide near-realtime visibility into key _data products_.
 - Transform market + reference data masters platforms for more reliable, trusted _golden source_ data, that vastly reduces manual efforts for workflows like client onboarding and data remediation.
 
-### **Vice President, Data Science Engineering** _(2020–2023)_
+## **Vice President, Data Science Engineering** _(2020–2023)_
 
 **Team & Stakeholder Management:**
 
@@ -53,7 +53,7 @@ I lead and oversee four critical teams that drive data excellence across the org
 - Architected enterprise-grade identity provider integration for JupyterHub, implementing OAuth 2.0, reducing auth-related development time while improving security posture "out of the box" to users.
 - Pioneered "EUC Governance" framework to streamline self-service analytics while mitigating operational risk.
 
-### **Software Engineer Technical Lead** _(2019–2020)_
+## **Software Engineer Technical Lead** _(2019–2020)_
 
 **Technical Innovation & Platform Leadership**
 
@@ -71,7 +71,7 @@ I lead and oversee four critical teams that drive data excellence across the org
 - **TDS Pinnacle Award of Achievement** (Top 0.1% performance).
 - **TD Vision In Action Award** (1-in-1000 enterprise-wide recognition).
 
-### Earlier Roles
+## Earlier Roles
 
 **Software Engineer** _(2018–2019)_: Bugfixes, enhacements, and early architecture for the TDS Notebooks Platform; spoke at PyCon CA ([talk link](https://2019.pycon.ca/talks/talk-111/)).
 
