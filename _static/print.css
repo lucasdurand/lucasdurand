@@ -1,0 +1,10 @@
+@media print {
+    .page-toc, .bd-toc, #jb-print-toc {
+        visibility: hidden;
+        display: none;
+    }
+    .col-md-9 {
+        max-width: unset !important;
+        flex: unset !important;
+    }
+}
