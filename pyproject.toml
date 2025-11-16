@@ -1,0 +1,16 @@
+[project]
+name = "lucasdurand"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ghp-import>=2.1.0",
+    "jupyter-book>=1.0.4.post1",
+    "matplotlib>=3.10.1",
+    "nymp>=0.0.2",
+    "pandas>=2.2.3",
+    "playwright>=1.46.0",
+    "plotly>=6.0.0",
+    "pyppeteer>=2.0.0",
+]
