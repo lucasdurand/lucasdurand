@@ -27,10 +27,9 @@ jobs:
 
       # Install dependencies using astral-uv
       - name: Set up Python 3.11 with uv
-        uses: astral-sh/uv-action@v1
+        uses: astral-sh/setup-uv@v7
         with:
           python-version: 3.11
-
       - name: Install dependencies with uv
         run: |
           uv sync
