@@ -24,6 +24,4 @@ This may overwrite the `index.html` from the "real site", so be careful to re-ge
 
 ## Deploy to Github Pages
 
-When changes are ready to deploy, deploy!
-
-`uv run ghp-import _build/html -pon` deployment to the gh-pages branch, served from github.io and available behind https://lucasdurand.xyz. This should trigger a realtime update to the site. **Be sure to include the -n flag, or else the site won't render properly**
+This happens via Github Actions now!

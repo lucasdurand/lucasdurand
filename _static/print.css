@@ -1,10 +1,24 @@
 @media print {
-    .page-toc, .bd-toc, #jb-print-toc {
-        visibility: hidden;
-        display: none;
-    }
-    .col-md-9 {
-        max-width: unset !important;
-        flex: unset !important;
-    }
+  .page-toc,
+  .bd-toc,
+  #jb-print-toc,
+  .docutils {
+    visibility: hidden;
+    display: none;
+  }
+  .col-md-9 {
+    max-width: unset !important;
+    flex: unset !important;
+  }
+  .bd-main .bd-content h1 {
+    margin-top: 0px;
+    margin-left: unset !important;
+  }
+  .bd-content {
+    margin-left: unset !important;
+  }
+
+  .fa-3x {
+    font-size: 1.5rem;
+  }
 }

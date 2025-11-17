@@ -2,18 +2,14 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: home/intro
+root: home/resume
 parts:
   - caption: Work Experience
     chapters:
-    - file: work/work
-    - file: work/td
-    - file: work/aidd
-    - file: work/yorkta
-    - file: work/nbfm
+      - file: work/td
+      - file: work/nbfm
   - caption: Education
     chapters:
-    - file: education/education
-    - file: education/york
-    - file: education/perimeter
-    - file: education/uoft
+      - file: education/york
+      - file: education/perimeter
+      - file: education/uoft

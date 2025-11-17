@@ -1,0 +1,88 @@
+/* Hide all navigation */
+.bd-sidebar-primary,
+.bd-sidebar-secondary,
+.bd-header,
+.bd-footer,
+.bd-toc,
+.prev-next-area,
+.back-to-top {
+  display: none !important;
+}
+
+/* Make the resume wide and centered */
+.bd-main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.bd-main .bd-content .bd-article-container,
+.bd-page-width {
+  max-width: unset;
+}
+
+.bd-main .bd-content .bd-article-container .bd-article {
+  padding: 0px;
+}
+
+.bd-content {
+  /* max-width: 900px; */
+  margin: 0 0;
+  padding: 0.5rem !important;
+  display: inline-block !important;
+}
+
+/* Tighten up headings */
+h1 {
+  font-size: 1.8rem !important;
+  margin-bottom: 0.5rem !important;
+  margin-top: 0.5rem;
+}
+h2 {
+  font-size: 1.4rem !important;
+  margin-bottom: 0.4rem !important;
+  margin-top: 0.4rem;
+}
+h3 {
+  font-size: 1.2rem !important;
+  margin-bottom: 0.3rem !important;
+  margin-top: 0.3rem;
+}
+
+/* Tighten paragraphs and lists */
+p,
+ul,
+ol {
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.2rem !important;
+  line-height: 1.2;
+}
+
+li {
+  margin-bottom: 0.1rem !important;
+  page-break-inside: avoid;
+}
+
+/* Compact section styling */
+.resume-section {
+  padding-top: 0.5rem;
+  margin-top: 1px;
+}
+
+/* Reduce space between sections */
+section {
+  margin-bottom: -1px;
+}
+
+/* Tighten up tables */
+table.docutils {
+  margin: 1px;
+}
+table.docutils td,
+table.docutils th {
+  padding-top: 0px;
+}
+
+.d-print-none,
+.noprint {
+  display: none;
+}
