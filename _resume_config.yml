@@ -33,9 +33,6 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  extra_css:
-    - resume.css
-    - print.css
 sphinx:
   config:
     html_js_files:
@@ -44,4 +41,6 @@ sphinx:
     html_favicon: home/favicon.ico
     myst_enable_extensions:
       - html_image
-    html_static_path: ["_static"]
+    html_static_path:
+      - _static
+      - _optional_static
