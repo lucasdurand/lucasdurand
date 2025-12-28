@@ -4,14 +4,22 @@
 format: jb-book
 root: home/intro
 parts:
-  - caption: Work Experience
+  - caption: Leadership & Experience
     chapters:
+    - file: leadership/overview
     - file: work/td
-    - file: work/aidd
-    - file: work/yorkta
     - file: work/nbfm
-  - caption: Projects
+    - file: education/condensed
+  - caption: Philosophy
     chapters:
+    - file: philosophy/data-strategy
+    - file: philosophy/what-i-build
+  - caption: Contact
+    chapters:
+    - file: home/contact
+  - caption: Technical Depth & Community
+    chapters:
+    - file: misc/speaking
     - file: projects/languages
     - url: https://lucasdurand.xyz/network-graph-tutorial/
       title: Network Graph Tutorial
@@ -21,12 +29,3 @@ parts:
       title: Cardiac Obstetrics Risk Calculator (POC)
     - url: https://lucasdurand.xyz/visualization-seminar/
       title: Visualization Seminar
-  - caption: Community
-    chapters:
-    - file: misc/speaking
-    - file: misc/volunteer
-  - caption: Education
-    chapters:
-    - file: education/york
-    - file: education/perimeter
-    - file: education/uoft
