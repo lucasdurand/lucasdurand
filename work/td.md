@@ -43,7 +43,7 @@ _Leadership focus: building platforms that empower teams to move fast safely, us
 
 ### Platform & Delivery Impact
 
-- Architected TDSs first centralized JupyterHub+ platform (serving [400+] users), reducing prototyping time by 70%.
+- Architected TD Securities’ first centralized JupyterHub+ platform (serving [400+] users), reducing prototyping time by 70%.
 - Mentored junior engineers through code reviews and best-practice workshops (adopted org-wide).
 
 ### Recognition
