@@ -1,8 +1,11 @@
 ## Contact
 
-I'm generally interested in contributing to innovative organizations through partnership, collaboration, and teaching. Reach me by the digital channel of your choosing:
+I'm generally interested in contributing to innovative organizations through partnership, collaboration, and teaching. Let's connect!
 <div style="display: flex; justify-content: center;">
 	<div style="display:flex; flex: 1; max-width:30rem">
+		<a href="https://lucasdurand.xyz" style="flex: 1; text-align: center; color:#fab110">
+			<i class="fas fa-globe fa-3x"></i>
+		</a>
 		<a href="mailto:lucas@lucasdurand.xyz" style="flex: 1; text-align: center; color:#e75c1e">
 			<i class="fas fa-envelope fa-3x"></i>
 		</a>

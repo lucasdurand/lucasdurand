@@ -42,3 +42,7 @@ sphinx:
     html_favicon: home/favicon.ico
     myst_enable_extensions: 
     - html_image
+    html_title: "Lucas Durand — Data & Technology Leader"
+    html_short_title: "Lucas Durand"
+    html_meta:
+      description: "Lucas Durand — strategic data and technology leader building scalable data platforms, driving data strategy, and delivering measurable business outcomes."

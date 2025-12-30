@@ -44,3 +44,7 @@ sphinx:
     html_static_path:
       - _static
       - _optional_static
+    html_title: "Lucas Durand — Data & Technology Leader"
+    html_short_title: "Lucas Durand"
+    html_meta:
+      description: "Resume-style view: Lucas Durand — strategic data and technology leader focused on platform and data strategy in financial services."
