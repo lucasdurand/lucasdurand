@@ -1,4 +1,4 @@
-## NBFM (2014-2015)
+## National Bank Financial Markets (2014-2015)
 
 ### Trade Floor Application Analyst
 
