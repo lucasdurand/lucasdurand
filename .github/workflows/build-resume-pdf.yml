@@ -26,18 +26,24 @@ jobs:
           # uv run jupyter-book build .
           uv run jb build ./ --builder=html --toc=_resume_toc.yml --config=_resume_config.yml && uv run python make_resume_view.py
 
-      # --- HTML -> PDF ---
-      - name: Convert HTML to PDF
-        uses: fifsky/html-to-pdf-action@v0.1.0
+      # ---- PDF step (Playwright) ----
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          htmlFile: ./_build/html/index.html
-          outputFile: ./out/Lucas Durand.pdf
-          pdfOptions: '{"format":"A4","printBackground":true,"margin":{"top":"10mm","left":"10mm","right":"10mm","bottom":"10mm"}}'
-        # Inputs documented in the action README. :contentReference[oaicite:3]{index=3}
+          node-version: "20"
+
+      - name: Install Playwright
+        run: |
+          npm i -D playwright
+          npx playwright install --with-deps chromium
+
+      - name: Render PDF
+        run: |
+          node scripts/html_to_pdf.mjs ./build/html/index.html ./build/out/Lucas\ Durand.pdf
 
       # --- Upload artifact ---
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: pdf-output
-          path: ./out/Lucas Durand.pdf
+          path: ./out/Lucas\ Durand.pdf
