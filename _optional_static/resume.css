@@ -75,6 +75,13 @@ ol {
   line-height: 1.2;
 }
 
+li > p {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin: 0px !important;
+  line-height: 1;
+}
+
 /* Multi-column layout for lists */
 ul,
 ol {
@@ -91,9 +98,9 @@ ol {
 }
 
 li {
-  margin-bottom: 0.1rem !important;
   page-break-inside: avoid;
-  break-inside: avoid-column;
+  break-inside: avoid;
+  margin: 0;
 }
 
 /* Reduce space between sections */

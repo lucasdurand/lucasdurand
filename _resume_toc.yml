@@ -12,3 +12,6 @@ parts:
   - part: Education
     chapters:
       - file: education/condensed
+  - part: Contact
+    chapters:
+      - file: home/contact
