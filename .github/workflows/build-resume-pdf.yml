@@ -5,6 +5,9 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: write
+
 jobs:
   html_to_pdf:
     runs-on: ubuntu-latest
@@ -39,11 +42,31 @@ jobs:
 
       - name: Render PDF
         run: |
-          node html_to_pdf.mjs ./_build/html/index.html ./out/Lucas\ Durand.pdf
+          node html_to_pdf.mjs ./_build/html/index.html ./Lucas\ Durand.pdf
 
       # --- Upload artifact ---
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: pdf-output
-          path: ./out/Lucas\ Durand.pdf
+          name: resume-pdf
+          path: ./Lucas\ Durand.pdf
+          if-no-files-found: error
+          
+      # --- Commit PDF back to repo ---
+      - name: Commit PDF
+        run: |
+          set -e
+
+          git status
+          git add ./Lucas\ Durand.pdf
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git commit -m "Update generated resume PDF"
+          git push
