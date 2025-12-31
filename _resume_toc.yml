@@ -4,12 +4,11 @@
 format: jb-book
 root: home/resume
 parts:
-  - caption: Work Experience
+  - part: Work Experience
     chapters:
-      - file: work/td
-      - file: work/nbfm
-  - caption: Education
+      - file: work/condensed
+      # - file: work/td
+      # - file: work/nbfm
+  - part: Education
     chapters:
-      - file: education/york
-      - file: education/perimeter
-      - file: education/uoft
+      - file: education/condensed

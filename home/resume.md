@@ -1,13 +1,9 @@
-# Lucas Durand (he/him/his) | Data & Technology Leader
+# Lucas Durand | Data & Technology Leader
 
-_🌱 Growing communities of people 💑 building modern data science technology ⚗️_
+Data and technology leader specializing in enterprise data platforms, analytics enablement, and governance in regulated environments. Over a decade of experience building and scaling trusted data capabilities that support trading, risk, and enterprise decision-making. Known for combining platform strategy, disciplined execution, and people leadership to deliver durable outcomes at scale.
 
-I am best viewed at [lucasdurand.xyz](https://lucasdurand.xyz) 🔗
-
-```{include} pronouns.md
+```{include} links.md
 
 ```
 
-```{include} contact.md
-
-```
+**CAPABILITIES:** Enterprise Data Strategy • Data Platforms • Analytics & AI Enablement • Data Governance & Quality • Operating Models • Developer Experience • Organizational Leadership
