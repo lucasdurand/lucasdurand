@@ -57,9 +57,25 @@ ol {
   line-height: 1.2;
 }
 
+/* Multi-column layout for lists */
+ul,
+ol {
+  column-count: 2;
+  column-gap: 1.5rem;
+  break-inside: avoid-column;
+}
+
+@media (min-width: 900px) {
+  ul,
+  ol {
+    column-count: 3;
+  }
+}
+
 li {
   margin-bottom: 0.1rem !important;
   page-break-inside: avoid;
+  break-inside: avoid-column;
 }
 
 /* Compact section styling */
@@ -86,3 +102,4 @@ table.docutils th {
 .noprint {
   display: none;
 }
+
