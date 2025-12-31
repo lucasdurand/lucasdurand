@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
+    paths-ignore:
+      - Lucas\ Durand.pdf    
 
 permissions:
   contents: write
@@ -51,7 +53,7 @@ jobs:
           name: resume-pdf
           path: ./Lucas\ Durand.pdf
           if-no-files-found: error
-          
+
       # --- Commit PDF back to repo ---
       - name: Commit PDF
         run: |
