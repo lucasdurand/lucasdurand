@@ -39,7 +39,7 @@ jobs:
 
       - name: Render PDF
         run: |
-          node html_to_pdf.mjs ./build/html/index.html ./build/out/Lucas\ Durand.pdf
+          node html_to_pdf.mjs ./_build/html/index.html ./out/Lucas\ Durand.pdf
 
       # --- Upload artifact ---
       - name: Upload PDF artifact
