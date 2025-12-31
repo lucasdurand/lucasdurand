@@ -14,9 +14,6 @@ parts:
     chapters:
     - file: philosophy/data-strategy
     - file: philosophy/what-i-build
-  - caption: Contact
-    chapters:
-    - file: home/contact
   - caption: Technical Depth & Community
     chapters:
     - file: misc/speaking
@@ -29,3 +26,6 @@ parts:
       title: Cardiac Obstetrics Risk Calculator (POC)
     - url: https://lucasdurand.xyz/visualization-seminar/
       title: Visualization Seminar
+  - caption: Contact
+    chapters:
+    - file: home/contact

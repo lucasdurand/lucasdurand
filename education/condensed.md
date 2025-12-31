@@ -1,4 +1,4 @@
-## Education
+# Education
 
 **MSc, Theoretical Physics** - York University  
 Research focus in theoretical physics; extensive experience in quantitative analysis, modeling, and scientific computing.

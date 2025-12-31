@@ -34,17 +34,24 @@ html:
   use_issues_button: true
   use_repository_button: true
 sphinx:
+  local_extensions:
+    jb_flags: _ext
+    only_heading_html: _ext
+  extra_extensions:
+    - jb_flags
+    - only_heading_html
   config:
+    resume: true
     html_js_files:
+      - force-light-theme.js
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
       - https://kit.fontawesome.com/1e92b0bb3c.js
     html_favicon: home/favicon.ico
     myst_enable_extensions:
       - html_image
+      - colon_fence
     html_static_path:
       - _static
       - _optional_static
     html_title: "Lucas Durand — Data & Technology Leader"
     html_short_title: "Lucas Durand"
-    html_meta:
-      description: "Resume-style view: Lucas Durand — strategic data and technology leader focused on platform and data strategy in financial services."
