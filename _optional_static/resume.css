@@ -110,10 +110,10 @@ section {
 }
 
 /* deepest <section> -- it contains no nested <section> */
-section:not(:has(section)) {
+/* section:not(:has(section)) {
   break-inside: avoid;
   page-break-inside: avoid; /* legacy */
-}
+} */
 
 /* Tighten up tables */
 table.docutils {
