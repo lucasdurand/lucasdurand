@@ -27,8 +27,10 @@ jobs:
         uses: actions/checkout@v4
 
       # --- Build step (Python / uv / env vars) ---
-      - name: Setup env for profile
+      - name: Setup uv
         uses: astral-sh/setup-uv@v7
+
+      - name: Setup env for profile
         run: |
           echo "JB_${{ matrix.profile }}=1" >> "$GITHUB_ENV"
 
@@ -55,10 +57,9 @@ jobs:
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
+          name: resume-pdf-${{ matrix.profile }}
           path: ./Lucas\ Durand-${{ matrix.profile }}.pdf
           if-no-files-found: error
-
   commit_outputs:
     if: github.ref == 'refs/heads/main' # only run on main branch
     needs: html_to_pdf
@@ -69,16 +70,17 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: /tmp/resumes
+          pattern: resume-pdf-*
+          merge-multiple: true
 
       - name: Move downloaded PDFs into repo
         run: |
-          mkdir -p artifacts/resume
-          find /tmp/resumes -name '*.pdf' -maxdepth 3 -print -exec cp {} ./ \;
+          find /tmp/resumes -name '*.pdf' -maxdepth 2 -print -exec cp {} ./ \;
 
       - name: Commit outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add artifacts/resume/*.pdf
+          git add *.pdf
           git commit -m "Update resume PDFs" || exit 0
           git push
