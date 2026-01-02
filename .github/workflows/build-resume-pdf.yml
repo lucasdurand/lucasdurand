@@ -3,10 +3,6 @@ name: Build HTML and Export PDF
 on:
   workflow_dispatch:
   push:
-    branches: ["*"]
-    paths-ignore:
-      - "**.pdf"
-      - "README*.md"
     paths:
       - "**.md"
       - "_static/**"
