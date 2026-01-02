@@ -3,9 +3,15 @@ name: Build HTML and Export PDF
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: ["*"]
     paths-ignore:
-      - Lucas\ Durand.pdf    
+      - "**.pdf"
+      - "README*.md"
+    paths:
+      - "**.md"
+      - "_static/**"
+      - "_ext/**"
+      - ".github/workflows/build-resume-pdf.yml"
 
 permissions:
   contents: write
@@ -13,23 +19,22 @@ permissions:
 jobs:
   html_to_pdf:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        profile: [AI, RESUME]
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
 
-      # --- Build step (Python / uv) ---
-      - name: Install uv
+      # --- Build step (Python / uv / env vars) ---
+      - name: Setup env for profile
         uses: astral-sh/setup-uv@v7
-
-      - name: Build site (example)
         run: |
-          # Replace this with *your* build command.
-          # Examples:
-          # uv run python -m your_package.build
-          # uv run mkdocs build
-          # uv run jupyter-book build .
-          uv run jb build ./ --builder=html --toc=_resume_toc.yml --config=_resume_config.yml && uv run python make_resume_view.py
+          echo "JB_${{ matrix.profile }}=1" >> "$GITHUB_ENV"
+
+      - name: Build resume
+        run: |
+          sh scripts/build_resume.sh
 
       # ---- PDF step (Playwright) ----
       - name: Setup Node
@@ -44,31 +49,36 @@ jobs:
 
       - name: Render PDF
         run: |
-          node html_to_pdf.mjs ./_build/html/index.html ./Lucas\ Durand.pdf
+          node scripts/html_to_pdf.mjs ./_build/html/index.html ./Lucas\ Durand-${{ matrix.profile }}.pdf
 
       # --- Upload artifact ---
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
-          path: ./Lucas\ Durand.pdf
+          path: ./Lucas\ Durand-${{ matrix.profile }}.pdf
           if-no-files-found: error
 
-      # --- Commit PDF back to repo ---
-      - name: Commit PDF
+  commit_outputs:
+    if: github.ref == 'refs/heads/main' # only run on main branch
+    needs: html_to_pdf
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/resumes
+
+      - name: Move downloaded PDFs into repo
         run: |
-          set -e
+          mkdir -p artifacts/resume
+          find /tmp/resumes -name '*.pdf' -maxdepth 3 -print -exec cp {} ./ \;
 
-          git status
-          git add ./Lucas\ Durand.pdf
-
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
+      - name: Commit outputs
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git commit -m "Update generated resume PDF"
+          git add artifacts/resume/*.pdf
+          git commit -m "Update resume PDFs" || exit 0
           git push
