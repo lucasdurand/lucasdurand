@@ -112,7 +112,7 @@ section {
 /* deepest <section> -- it contains no nested <section> */
 /* section:not(:has(section)) {
   break-inside: avoid;
-  page-break-inside: avoid; /* legacy */
+  page-break-inside: avoid;
 } */
 
 /* Tighten up tables */
