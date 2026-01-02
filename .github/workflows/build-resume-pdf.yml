@@ -5,7 +5,7 @@ on:
   push:
     paths:
       - "**.md"
-      - "_static/**"
+      - "**.css"
       - "_ext/**"
       - ".github/workflows/build-resume-pdf.yml"
 
