@@ -2,6 +2,7 @@ name: deploy-book
 
 # Run this when the master or main branch changes
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -25,7 +26,7 @@ jobs:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Install dependencies using astral-uv
       - name: Set up Python with uv
@@ -39,7 +40,7 @@ jobs:
       # execute:
       #   execute_notebooks: cache
       - name: cache executed notebooks
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: _build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
